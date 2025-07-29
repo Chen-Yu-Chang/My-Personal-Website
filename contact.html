@@ -37,21 +37,21 @@
             </div>
             <div class="submit-form">
                 <h4 class="third-text text">Contact Us</h4>
-                <form action="form-handler.php">
+                <form action="form-handler.php" method="post">
                     <div class="input-box">
-                        <input type="text" class="input" required>
+                        <input type="text" class="input" name="name" required>
                         <label for="">Name</label>
                     </div>
                     <div class="input-box">
-                        <input type="email" class="input" required>
+                        <input type="email" class="input" name="email" required>
                         <label for="">Email</label>
                     </div>
                     <div class="input-box">
-                        <input type="tel" class="input" required>
+                        <input type="tel" class="input" name="phone" required>
                         <label for="">Phone</label>
                     </div>
                     <div class="input-box">
-                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" class="input" required id="message" cols="30" rows="10"></textarea>
                         <label for="">Message</label>
                     </div>
                     <input type="submit" class="btn2" value="Submit">
