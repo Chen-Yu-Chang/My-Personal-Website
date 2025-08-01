@@ -19,7 +19,6 @@ body{
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    /*background-color: black;*/
     color: white;
 }
 
@@ -338,11 +337,141 @@ span{
 }
 
 /*Experience*/
+.header1{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .5s;
+}
+
+.experience-content{
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-image: linear-gradient(rgba(9, 14, 37, 0.7),rgba(17, 22, 45, 0.7)),url(images/experience.jpg);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
 .experience-content h2{
-    margin-top: 100px;
-    line-height: 1.2;
+    padding-top: 170px;
+    font-size: 50px;
+}
+
+.experience{
+    background: black;
+    width: 100%;
+}
+
+.experience-container{
+    margin: auto;
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*.project h2{
+    font-size: 35px;
+    color: #b74b4b;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    width: 80%;
+    margin: auto;
+}*/
+
+.experience-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.experience-col img{
+    padding-top: 30px;
+    padding-left: 5px;
+    height: 50vh;
+    width: auto;
+    align-items: center;
+}
+.experience-col h1{
+    padding-top: 0;
+    font-size: 28px;
+    text-align: left;
+}
+.experience-col p{
+    padding: 15px 0 25px;
+    text-align: left;
+}
+
+/*Project*/
+.title{
     background-color: black;
-    /*color: #b74b4b;*/
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.project-content{
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-image: linear-gradient(rgba(9, 14, 37, 0.7),rgba(17, 22, 45, 0.7)),url(images/project.jpg);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.project-content h2{
+    padding-top: 170px;
+    font-size: 50px;
+}
+
+.project{
+    background: black;
+    width: 100%;
+}
+
+.project-container{
+    margin: auto;
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.project-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.project-col img{
+    padding-top: 30px;
+    padding-left: 5px;
+    height: 50vh;
+    width: auto;
+    align-items: center;
+}
+
+.project-col h1{
+    padding-top: 0;
+    font-size: 28px;
+    text-align: left;
+}
+.project-col p{
+    padding: 15px 0 25px;
+    text-align: left;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*Footer*/
