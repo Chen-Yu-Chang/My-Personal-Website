@@ -1,201 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Chen-Yu's Portfolio</title>
+    <link rel="stylesheet" href="site.css">
+    <title>Experience — Chen-Yu Chang</title>
 </head>
+
 <body>
-    <section class="header1">
-        <a href="index.html" class="logo"> Chen-Yu Chang</a>
-        <nav>
+    <header class="site-header">
+        <a href="index.html" class="site-logo">Chen-Yu Chang</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-home"><i class="fa-solid fa-house"></i></a>
             <a href="about.html">About</a>
-            <a href="skill.html">Experience</a>
-            <a href="project.html">Papers/Project</a>
+            <a href="skill.html" class="is-active">Experience</a>
+            <a href="project.html">Papers / Project</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </section>
-    <section class="experience-content">
-        <h2>Experience</h2>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>Texas Instruments</h1>
-                    <h2>Position: Product Marketing Engineer</h2><p>Time: September 2022 - June 2023 & January 2024 - February 2025
-                        <li>Led new MCU definition with customer feedback and the need of peripherals and performance on new model vehicles</li>
-                        <li>Explored and visited worldwide automotive customers and Tier1s to promote and guide future EV architecture</li>
-                        <li>Hosted a webinar with MathWork with 357 audience registered about Model Based Design on MCU support</li>
-                        <li>Expanded market share in new automotive field, including lighting, braking, BMS, zone, and increased 54% revenue</li>
-                        <li>Accelerated product release, including F28P65, F28P55, F29H85, F29P58, F29P32, and AM261, and conducted campaign to promote and target automotive application usecase</li>
-                        <li>Managed to fulfill customer backlog and collaborated with fabs to forecast wafer needs</li>
-                    </p>
-                    <h2>Position: Applications Engineer</h2><p>Time: June 2023 - December 2024
-                        <li>Initiated the launch of new product F29x, including datasheet and whitepaper, and presented 20min on Eletronica panel</li>
-                        <li>Supported customer questions on peripherals, such as DCSM and PWM, within C2000 products</li>
-                        <li>Conducted and coded temperature testing on F28P65x die to differentiate the defects to push the launch of the product</li>
-                    </p>
-                </div>
-                <div class="experience-col">
-                    <img src="images/ti.JPG">
-                </div>
-            </div>
+    </header>
+
+    <section class="page-hero">
+        <span class="page-eyebrow">01 · ENG — TIMELINE</span>
+        <h1 class="page-title">Experience</h1>
+        <p class="page-sub">Nine chapters from 2018 to now — full-time engineering work, independent
+            ventures, and the student teams that started it all. Click any frame to view photos or files.</p>
+
+        <div class="legend">
+            <span class="legend-item tag-fulltime"><span class="legend-dot"></span>Full-time</span>
+            <span class="legend-item tag-indie"><span class="legend-dot"></span>Independent</span>
+            <span class="legend-item tag-student"><span class="legend-dot"></span>Clubs &amp; Organizations</span>
         </div>
     </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>YouTube</h1>
-                    <h2>Position: Video Streamer/YouTuber</h2><p>Time: June 2023 - Now<br>
-                        <li>Managed to film videos sharing tech insights and overseas experience, reaching almost 3k subscribers</li>
-                        <li>Scripted the video content with deep research on each topic, such as automotive applications, microcontroller knowledge, etc.</li>
-                        <li>Gained 120K+ views and 7K+ hours of view time for my videos</li>
-                    </p>
+
+    <div class="timeline">
+
+        <!-- 1. Texas Instruments -->
+        <article class="entry tag-fulltime">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">01 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">Texas Instruments</h2>
+                    <span class="tag-pill tag-fulltime">Full-time</span>
                 </div>
-                <div class="experience-col">
-                    <video width="400" height="300" controls>
-                      <source src="images/youtube.MOV" type="video/mp4">
-                    </video>
+
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Product Marketing Engineer</span>
+                        <span class="role-time">Sept 2022 – Jun 2023 &amp; Jan 2024 – Feb 2025</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Expanded market share into new automotive segments (lighting, braking, BMS, zonal architecture), driving a 54% revenue increase through direct sales engagement with worldwide OEMs</li>
+                        <li>Launched three products (F280015x, F28P55x, AM261x) end-to-end, crafting go-to-market campaigns around application use cases (including OBC, DCDC, traction) and competitive differentiation, reaching more than 50M revenue with 80+ design wins</li>
+                        <li>Proposed an Ethernet-based zonal architecture presentation with Tesla (Ether-Ring AM26x) that cut wiring weight by 68% and assembly cost by 13.5%; demoed the solution at CES 2025</li>
+                        <li>Visited 7 automotive OEMs and Tier1s in person to define next-generation MCU requirements, securing oral commitments from accounts representing 50M+ units per year and shape future EV architecture</li>
+                        <li>Directed definition of unreleased MCU platforms by synthesizing customer feedback on peripherals and performance requirements for next-generation vehicle models, including F29 platform and new integration platforms</li>
+                        <li>Hosted a TI/MathWorks webinar on Model-Based Design to 357 attendees, presenting TIDM-02012 HVAC reference design</li>
+                        <li>Delivered technical presentations at Electronica Europe on C29 CPU performance benchmarks and their impact on system cost and development ecosystems</li>
+                    </ul>
+                </div>
+
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Applications Engineer</span>
+                        <span class="role-time">Jun 2023 – Dec 2024</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Spearheaded launch of the F29x product line, authoring the datasheet and whitepaper; whitepaper nominated to present at Electronica Europe on C29 CPU performance benchmarks and their impact on system cost and development ecosystems</li>
+                        <li>Collaborated with senior engineers to benchmark C29x vs C28x and competitor cores, demonstrating 4.31x faster signal-chain execution, 3–4x improvement in real-time control, and near-zero-cycle interrupt discontinuity overhead through delayed-branch architecture</li>
+                        <li>Provided technical support to customers on C2000 peripherals (DCSM, PWM) via TI's corporate E2E platform</li>
+                        <li>Designed a testing protocol temperature testing procedures for F28P65x die, validating 23 units per day and enabling the product's release by confirming defect-free silicon</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>FTSANE</h1>
-                    <h2>Position: Video Production Director</h2><p>Time: July 2023 - May 2024
+            <div class="media-slot" data-label="Texas Instruments" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
+                </div>
+                <div class="media-overlay">VIEW</div>
+            </div>
+            <div style="display:flex; gap:1rem; margin-top:0.9rem;">
+                <a class="project-link" href="https://www.ti.com/about-ti/events/electronica.html" target="_blank" rel="noopener">Electronica <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="project-link" href="https://event.on24.com/wcc/r/4772095/F9A581822C5A04EA37C1FF5295E84C25" target="_blank" rel="noopener">Webinar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <!-- 2. YouTube -->
+        <article class="entry tag-indie">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">02 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">YouTube</h2>
+                    <span class="tag-pill tag-indie">Independent</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Content Creator / YouTuber</span>
+                        <span class="role-time">Jun 2023 – Now</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Film videos sharing tech insight and overseas experience, reaching 8500+ subscribers</li>
+                        <li>Script every video with deep research — automotive applications, microcontroller knowledge, and more</li>
+                        <li>Gained 350K+ views and 23,000+ hours of watch time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="media-slot" data-label="YouTube — @tenzooutoften" data-kind="video">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-film"></i>
+                    <span>VIDEO PLACEHOLDER</span>
+                </div>
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 3. FTSANE -->
+        <article class="entry tag-student">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">03 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">FTSANE</h2>
+                    <span class="tag-pill tag-student">Clubs &amp; Organizations</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Video Production Director</span>
+                        <span class="role-time">Jun 2023 – May 2024</span>
+                    </div>
+                    <ul class="role-list">
                         <li>Directed the team for video promotion on Instagram and YouTube with activity trailers and reviews</li>
-                        <li>Gained more influence and students in New England area to expand connections for activities and career</li></p>
-                    <h2>Position: Event Planner</h2><p>Time: July 2022 - June 2023
-                        <li>Design and brainstorm how events help new college Taiwanese students to connect from games</li>
-                    </p>
+                        <li>Gained more influence and students in New England area to expand connections for activities and career</li>
+                    </ul>
                 </div>
-                <div class="experience-col">
-                    <img src="images/ftsane.jpg">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>Broccoli's in the Fridge</h1>
-                    <h2>Position: CEO & Cofounder</h2><p>Time: September 2020 - January 2022<br><br>
-                    <li>Fully funded by Sustainability Seed Grant and BU-wide recognized food waste mitigator start-up, Boston, MA</li> 
-                    <li>Created a service for busy young adults to mitigate their food waste by a calendaring system of best use dates and recipe suggestions</li> 
-                    <li>Conducted 22 customer interviews</li>
-                    <li>Secured a Sustainability Innovation Seed Grant of $500 from Sustainability@BU</li>
-                </p>
-                </div>
-                <div class="experience-col">
-                    <video width="400" height="300" controls>
-                      <source src="images/app.mp4" type="video/mp4">
-                    </video>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Event Planner</span>
+                        <span class="role-time">Jul 2022 – Jun 2023</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Designed and brainstormed events to help new Taiwanese college students connect through games</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>BU RAILS: BattleBot Team</h1>
-                    <h2>Position: BattleBot Team</h2><p>Time: October 2020 - May 2021<br><br>
-                    In BattleBot Team, we designed many different battlebots and researched on the compliance of weapons and balance. It gave us an opportunity to learn about robots for battle, balancing weapons and stability. We have designed some models of out future robots. Since this is a startup club, we are starting and doing research from the beginning.
-                    </p>
+            <div class="media-slot" data-label="FTSANE" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
                 </div>
-                <div class="experience-col">
-                    <img src="images/battle.jpeg">
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 4. Broccoli's in the Fridge -->
+        <article class="entry tag-indie">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">04 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">Broccoli's in the Fridge</h2>
+                    <span class="tag-pill tag-indie">Independent</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">CEO &amp; Cofounder</span>
+                        <span class="role-time">Sept 2020 – Jan 2022</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Cofounded a food-waste mitigation startup, funded by BU's Sustainability Seed Grant and recognized university-wide for social impact</li>
+                        <li>Built an iOS app in Swift with receipt-image upload, best-use-date tracking, and recipe suggestions to reduce household food waste</li>
+                        <li>Secured a $500 Sustainability Innovation Seed Grant from Sustainability@BU</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>Advance Foreign Language Institute</h1>
-                    <h2>Position: Teacher</h2><p>Time: July 2018 - Now<br>
-                    <li>Taught math, physics, grammar, English, APs, and calculus ranging from the age of elementary school students to college students</li>
-                    <li>Presented in front of the public and expresses my ideas clearly to students</li>
-                    <li>Organized and Categorized concepts in different subjects for students to follow</li>
-                    <li>Assisted many students to achieve the grade that they aimed for</li>
-                    </p>
+            <div class="media-slot" data-label="Broccoli's in the Fridge" data-kind="video">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-film"></i>
+                    <span>VIDEO PLACEHOLDER</span>
                 </div>
-                <div class="experience-col">
-                    <img src="images/class.jpg">
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 5. BU RAILS: BattleBot Team -->
+        <article class="entry tag-student">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">05 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">BU RAILS — BattleBot Team</h2>
+                    <span class="tag-pill tag-student">Clubs &amp; Organizations</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">BattleBot Team</span>
+                        <span class="role-time">Oct 2020 – May 2021</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Designed battlebots and researched weapon compliance and balance from the ground up</li>
+                        <li>Learned robot design for combat, weighing weapon systems against stability</li>
+                        <li>Modeled early concepts for future robots as a newly founded club</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>BU Rocket Propulsion Group</h1>
-                    <h2>Position: Hyper Rocket Team - Electric</h2><p>Time: October 2020 - January 2021<br>
-                    <li>Collaborated to design a hyper rocket and chose the appropriate components to reach its maximum height</li>
-                    <li>Coordinated the electrical group to design the microcontroller and connect them through Eagle</li>
-                    <li>Restructured the components of the rocket that improved the performance of simulations</li>
-                    </p>
+            <div class="media-slot" data-label="BU RAILS: BattleBot" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
                 </div>
-                <div class="experience-col">
-                    <img src="images/rocket1.jpg">
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 6. Advance Foreign Language Institute -->
+        <article class="entry tag-indie">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">06 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">Advance Foreign Language Institute</h2>
+                    <span class="tag-pill tag-indie">Independent</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Teacher</span>
+                        <span class="role-time">Jul 2018 – Now</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Taught math, physics, grammar, English, APs, and calculus from elementary to college level</li>
+                        <li>Presented in front of the public, expressing ideas clearly to students</li>
+                        <li>Organized and categorized concepts across subjects for students to follow</li>
+                        <li>Helped many students reach their target grades</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>BU Racing</h1>
-                    <h2>Position: Wheel Suspension Team</h2><p>Time: September 2020 - January 2021<br><br>
-                    BU Racing taught us the basic knowledge of cars and separated us into specific teams. Our team focused on the wheel and suspension part which requires calculations of force for the second racecar in BU. <br><br>
-                    The car image on the right is our first car.
-                    </p>
+            <div class="media-slot" data-label="Advance Foreign Language Institute" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
                 </div>
-                <div class="experience-col">
-                    <img src="images/car.jpg">
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 7. BU Rocket Propulsion Group -->
+        <article class="entry tag-student">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">07 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">BU Rocket Propulsion Group</h2>
+                    <span class="tag-pill tag-student">Clubs &amp; Organizations</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Hybrid Rocket Team — Electrical</span>
+                        <span class="role-time">Oct 2020 – Jan 2021</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Collaborated on the design of a high-power rocket targeting a 3,000m apogee and optimized component weight, structural design, and electrical systems through simulation to maximize altitude performance</li>
+                        <li>Led the electrical team in designing a custom PCB in Eagle CAD for selected microcontrollers and sensors</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="experience">
-        <div class="experience-container">
-            <div class="row">
-                <div class="experience-col">
-                    <h1>Hui-Wen High School</h1>
-                    <h2>Position: Speaker</h2><p>Time: August 2019<br><br>
-                    Hui-Wen High School provided me an opportunity to present my experience of studying abroad in the US in Study Abroad Conference (even TV broadcaster came). I also offered some advice to the rising 12th grade student since I believe inheritance is important so I decided to share my experience and pass on the message.<br><br>
-                    <li>Guided high school students to find their direction on majors</li>
-                    <li>Shared in front of approximately 100 students about my experience in Boston</li>
-                    </p>
+            <div class="media-slot" data-label="BU Rocket Propulsion Group" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
                 </div>
-                <div class="experience-col">
-                    <img src="images/speaker1.jpg">
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 8. BU Racing -->
+        <article class="entry tag-student">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">08 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">BU Racing</h2>
+                    <span class="tag-pill tag-student">Clubs &amp; Organizations</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Wheel Suspension Team</span>
+                        <span class="role-time">Sept 2020 – Jan 2021</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Learned the fundamentals of vehicle dynamics across specialized subteams</li>
+                        <li>Focused on wheel and suspension force calculations for BU's second racecar</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="footer">
-        <a href="" class="btn">Back to the Front</a>
-        <h4>Connect with Me</h4>
-        <p>Contact me through email cchenyu.pro@gmail.com or social media</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/chen-yu-chang-53825b174/"><i class="fa-brands fa-linkedin"></i></a>
+            <div class="media-slot" data-label="BU Racing" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
+                </div>
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+        <!-- 9. Hui-Wen High School -->
+        <article class="entry tag-student">
+            <div class="entry-node"></div>
+            <div class="entry-body">
+                <span class="entry-index">09 / 09</span>
+                <div class="entry-head">
+                    <h2 class="entry-org">Hui-Wen High School</h2>
+                    <span class="tag-pill tag-student">Clubs &amp; Organizations</span>
+                </div>
+                <div class="role-block">
+                    <div class="role-line">
+                        <span class="role-name">Speaker</span>
+                        <span class="role-time">Aug 2019</span>
+                    </div>
+                    <ul class="role-list">
+                        <li>Presented on studying abroad in the US at a Study Abroad Conference, covered by a TV broadcaster</li>
+                        <li>Guided rising 12th-graders on finding direction in choosing a major</li>
+                        <li>Shared experience in Boston with roughly 100 students</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="media-slot" data-label="Hui-Wen High School" data-kind="photo">
+                <div class="media-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>PHOTO PLACEHOLDER</span>
+                </div>
+                <div class="media-overlay">VIEW</div>
+            </div>
+        </article>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="foot-name">Chen-Yu Chang</div>
+        <p>cchenyu.pro@gmail.com</p>
+        <div class="foot-links">
+            <a href="https://www.linkedin.com/in/chenyuchang0509/"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Chen-Yu-Chang"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/enzo_miniboss/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/tenzooutoften/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/@enzochangtw"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <p>Made by Chen-Yu Chang</p>
-    </section>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-frame">
+            <i class="fa-solid fa-image"></i>
+            <span class="lightbox-placeholder-text">Photo coming soon</span>
+            <img alt="">
+            <video controls></video>
+            <iframe class="lightbox-pdf"></iframe>
+            <div class="lightbox-caption"></div>
+            <button class="lightbox-close">CLOSE ✕</button>
+        </div>
+    </div>
+
+    <script src="site.js"></script>
 </body>
+
+</html>

@@ -1,56 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Chen-Yu's Portfolio</title>
+    <link rel="stylesheet" href="site.css">
+    <title>About — Chen-Yu Chang</title>
 </head>
+
 <body>
-    <header>
-        <a href="index.html" class="logo"> Chen-Yu Chang</a>
-        <nav>
-            <a href="about.html">About</a>
+    <header class="site-header">
+        <a href="index.html" class="site-logo">Chen-Yu Chang</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-home"><i class="fa-solid fa-house"></i></a>
+            <a href="about.html" class="is-active">About</a>
             <a href="skill.html">Experience</a>
-            <a href="project.html">Papers/Project</a>
+            <a href="project.html">Papers / Project</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <p>I am Chen-Yu Chang, currently applying to pursue a Master's in Electrical and Computer Engineering. With a background in the combination of hardware and software, I specialize in leveraging cutting-edge technologies such as machine learning, smart & connected systems, and microcontrollers to solve real-world problems.</p></li>
-            <li>Lead the new MCU (C2000 and AM26 family) definitions in Texas Instruments</li>
-            <li>Focus on new automotive applications, such as lighting, braking, battery management system, zone </li>
-            <li>Released a white paper showcasing the C29 CPU’s benchmark and performance comparing to competitors with colleagues, which is presented in Electronica Germany</li>
-            <p>Entrepreneurial ventures include: </p>
-            <li>Build my own YouTube channel, a platform to share tech and experience to audience</li>
-            <li>Found Broccoli’s in the Fridge within BU and fully funded by them </li>
-            <p>Through my diverse experiences in academia, startups, and industry, I've developed expertise in product definition, hardware and software integration, and leading the team to grow in the industry. Whether developing innovative technologies, orchestrating the team for building influence, or engineering leading applications. I am zealous in stimulating the movement that can change the world.</p>
-            <p>Outside of work, I enjoy experiencing new activities, producing videos, and engaging in both technical and aesthetic thoughts.</p> 
-            <h2 class="heading"><span>Engineer by title, explorer by spirit!</span></h2>
-            <p></p>
-            <a href="skill.html" class="btn">Experience</a>&nbsp;&nbsp;&nbsp;
-            <a href="project.html" class="btn">Papers/Project</a>&nbsp;&nbsp;&nbsp;
-            <a href="./images/Resume(Grad).pdf" download="Chen-Yu Chang Resume" class="btn1">Resume Download</a>
+
+    <section class="about-hero">
+        <div class="about-photo-wrap">
+            <img src="engineer.jpg" alt="Chen-Yu Chang">
         </div>
-        <div class="about-img">
-            <img src="images/about.png" alt="">
-        </div>
-        
     </section>
-    <section class="footer">
-        <a href="" class="btn">Back to the Front</a>
-        <h4>Connect with Me</h4>
-        <p>Contact me through email cchenyu.pro@gmail.com or social media</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/chen-yu-chang-53825b174/"><i class="fa-brands fa-linkedin"></i></a>
+
+    <section class="spectrum-stage">
+        <div class="spectrum-statements">
+            <p class="spectrum-statement" data-zone="engineer">I think in systems — MCUs, pipelines, and the
+                architecture underneath every decision.</p>
+            <p class="spectrum-statement is-visible" data-zone="center">Engineer by title, explorer by
+                spirit.</p>
+            <p class="spectrum-statement" data-zone="explorer">I chase what's unfamiliar — new cities, new
+                languages, new ways to tell a story.</p>
+        </div>
+
+        <div class="spectrum-control">
+            <div class="spectrum-labels">
+                <span class="lbl-engineer">ENGINEER</span>
+                <span class="lbl-explorer">EXPLORER</span>
+            </div>
+            <input type="range" class="spectrum-slider" id="spectrumSlider" min="0" max="100" value="50">
+        </div>
+        <p class="spectrum-hint"><i class="fa-solid fa-arrows-left-right"></i> Drag to explore both sides</p>
+    </section>
+
+    <section class="quick-facts">
+        <span class="fact-chip">Trilingual — 中 / EN / 日</span>
+        <span class="fact-chip">Boston University — Computer Engineering</span>
+        <span class="fact-chip">Incoming CMU — Civil &amp; Computer Engineering</span>
+        <span class="fact-chip">Taiwanese</span>
+    </section>
+
+    <section class="about-narrative">
+        <p>I spent three years at Texas Instruments shaping the microcontrollers that go into cars — then
+            decided the next chapter needed more than one lane. I'm headed to Carnegie Mellon to study
+            autonomous systems and smart cities, while building a Chinese-language channel that makes hard
+            technical ideas make sense to a general audience. Different mediums, same instinct: take
+            something complex, find its shape, and hand it to someone else in a form they can actually use.</p>
+    </section>
+
+    <section class="about-manifesto">
+        <h2>Engineer by <span class="m-steel">title</span>,<br>explorer by <span class="m-ember">spirit</span>.</h2>
+    </section>
+
+    <div class="about-cta">
+        <a class="resume-btn" href="Chen-Yu_Resume.pdf" download>DOWNLOAD RESUME <i class="fa-solid fa-arrow-down"></i></a>
+        <a class="project-link" href="skill.html">View Experience <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="project-link" href="project.html">Papers &amp; Project <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="foot-name">Chen-Yu Chang</div>
+        <p>cchenyu.pro@gmail.com</p>
+        <div class="foot-links">
+            <a href="https://www.linkedin.com/in/chenyuchang0509/"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/Chen-Yu-Chang"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/enzo_miniboss/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/tenzooutoften/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/@enzochangtw"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <p>Made by Chen-Yu Chang</p>
-    </section>
+    </footer>
+
+    <script>
+        (function () {
+            const slider = document.getElementById('spectrumSlider');
+            const statements = document.querySelectorAll('.spectrum-statement');
+            const steel = [74, 108, 140];
+            const ember = [184, 73, 46];
+
+            function zoneFor(v) {
+                if (v < 35) return 'engineer';
+                if (v > 65) return 'explorer';
+                return 'center';
+            }
+
+            function update() {
+                const v = Number(slider.value);
+                const t = v / 100;
+                const r = Math.round(steel[0] + (ember[0] - steel[0]) * t);
+                const g = Math.round(steel[1] + (ember[1] - steel[1]) * t);
+                const b = Math.round(steel[2] + (ember[2] - steel[2]) * t);
+                document.documentElement.style.setProperty('--spectrum-live', `rgb(${r}, ${g}, ${b})`);
+
+                const zone = zoneFor(v);
+                statements.forEach(s => {
+                    s.classList.toggle('is-visible', s.getAttribute('data-zone') === zone);
+                });
+            }
+
+            slider.addEventListener('input', update);
+            update();
+        })();
+    </script>
+    <script src="site.js"></script>
 </body>
+
+</html>
