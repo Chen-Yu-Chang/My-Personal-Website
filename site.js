@@ -81,6 +81,26 @@
     });
 })();
 
+// Card thumbnails: show a real preview image on a .media-slot before it's clicked.
+// Add data-thumb="path/to/image.jpg" to any media-slot to use it as the face image.
+// For kind="photo" slots, data-src is used automatically if data-thumb isn't set.
+(function () {
+    document.querySelectorAll('.media-slot').forEach(slot => {
+        const kind = slot.getAttribute('data-kind') || 'photo';
+        const thumb = slot.getAttribute('data-thumb') ||
+            (kind === 'photo' ? slot.getAttribute('data-src') : null);
+        if (!thumb) return;
+
+        const img = document.createElement('img');
+        img.src = thumb;
+        img.alt = slot.getAttribute('data-label') || '';
+        slot.insertBefore(img, slot.firstChild);
+
+        const placeholder = slot.querySelector('.media-placeholder');
+        if (placeholder) placeholder.style.display = 'none';
+    });
+})();
+
 // YouTube embeds: add data-youtube="VIDEO_ID" to a .video-card to swap its placeholder for a live embed
 (function () {
     document.querySelectorAll('[data-youtube]').forEach(card => {
@@ -89,7 +109,8 @@
         const iframe = card.querySelector('iframe');
         const placeholder = card.querySelector('.video-placeholder');
         if (iframe) {
-            iframe.src = `https://www.youtube.com/embed/${id}`;
+            iframe.src = `https://www.youtube-nocookie.com/embed/${id}`;
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
             iframe.style.display = 'block';
         }
         if (placeholder) placeholder.style.display = 'none';
